@@ -1,0 +1,1 @@
+![This is an image! I've used Github lots before as a computer science major, but I've never used the markdown language. Seems to work similarly to BBCode](https://cdn.discordapp.com/attachments/878449885064609813/1010379431245778974/unknown.png)
