@@ -1,0 +1,14 @@
+Day 1 tasks:
+Helped Mohammad determine how to turn his historical period into a game compatible with twine
+and authentic with class material (playing a governor mediating between rebels and state using 
+the algerian revolution against france as a background)
+
+Helped Hannah figure out some twine basics
+
+Came up with the idea of playing a fictional country managing the COVID-19 pandemic
+Received suggestion to use a historical setting for another illness, like the Spanish Flu that was
+even more deadly. Did consider how this could be implemented, but I think I'd rather opt for a critique
+of the celebritization of political leaders in this particular case. (Hot take: Political leaders should
+not be celebrities, it distracts from the position but at least it offers more transparency into their actions.
+
+Re-familiarized myself with twine and wrote the first 'set' of choices.
