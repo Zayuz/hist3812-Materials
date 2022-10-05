@@ -1,0 +1,13 @@
+Day 2:
+Opened twine file and completed the bulk of the game, everything except the ending pages.
+
+Refined the project's main idea as a strategy sim parody. The stats are supposed to be 
+meaningless, and all options lead to failure. An illusion of choice is given, but the unstoppable
+disease takes its toll. The question is really as follows... How will you lose?
+
+The game probably shouldn't be any more long or complex than 3 main choices, for the sake of 
+the interstitial's scope and the solo nature of the project. For interstitial 2, I hope to do it in a group.
+
+Because I could not make it into class today, I had little ability to bounce ideas off of others but I was
+able to focus well on the work being done! Twine is fun to work with. Perhaps tomorrow some pictures will be
+nice to include in the end-scenes.
