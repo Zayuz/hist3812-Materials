@@ -1,0 +1,14 @@
+Day 3
+
+While the story is 'finished', pictures were not as easily implemented as they were in prior versions of twine.
+For even previous projects in other semesters, I had been able to embed images via a link into the text like so:
+(image: [url]), or something very close to it. It seems that Harlowe, however, does not support this...
+
+Despite my background as a computer science student, I famously passed Web Development with a 51, so I instead
+chose to avoid HTML and focus my efforts on extending one of the passages to have an extra page or so, and deciding
+that there should be an option to play again. This is as much for conveience as it is for poeticism, as a player
+might have regrets about their choices, not knowing that they all lead to doom. Through replaying, instead of 
+feeling like they messed up, they might realize that it was futile to begin with. No matter the course of action,
+something was going to go wrong.
+
+I write this before doing my reflection, which I'm sure will have much more insight!
