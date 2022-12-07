@@ -1,0 +1,21 @@
+Day 2 Work:
+Reviewed and added in new insights to the reflection document. (The day 2 copy is what remains present in the day 1 folder.)
+Additions had to do with unmentioned feedback components, my own archaeogaming experience, and fixing writing errors.
+Attempt to remember how we got some simple things running in netlogo before... From memory alone - run and setup made.
+Looked up a basic syntax example and got a fun, chaotic little mess to play with. I recorded what this looks like in the Ephemera folder (please forgive the background audio, it is irrelevant).
+Add a level for how gulllible an agent is (random float from 0 to 1)
+Set all turtles to not believe in the hoax
+Set just one turtle to believe in the hoax
+
+During runtime, attempt to trick one random turtle into believing the hoax if you believe it.
+I wa considering 'if two turtles are near one another' but this doesn't seem to be well supported in netlogo.
+Expected reporter error for when I start to convert other turtles. Hmmm. (See Ephemera)
+Had to change the code to ask for a random turtle target first, unfortunately this means it can try to convince itself. However, it does seem to properly attempt to trick now.
+Perhaps this should be represented with a color change? All tricked turtles will be red, all non-tricked turtles will be blue.
+Implemented and testing... Another error! Sum expected to be a list but got a float instead. Changed 'sum' to 'max'. Doesn't work, accidentally found out how to do conversions based on proximity.
+It finally works! But it gives a red background screen, which isn't right. ...And it also creates a strange pattern of dark squares before the whole screen turns red, which may be because whenever a turtle is converted
+it converts the ground beneath it instead of changing color itself. Could this be analagous to littering? Probably not, because each turtle will litter infinitely and quickly cover every square.
+With some more adjustments, it finally works! Had to add a weight value so that turtles didnt try to convert themselves because they are always closest to themselves! See ephemera for working version day 2
+
+I am realizing that if I stopped here, this wouldn't represent a hoax at all - it would represent an attempt to educate all the people in a static environment based on how receptive they are to the subject.
+Add regenerating food piles to the simulation tomorrow and probably decrease the weight!

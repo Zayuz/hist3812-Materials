@@ -1,0 +1,20 @@
+Day 3 Work
+
+It occurs to me today after decreasing the weight that I don't know how to create non-turtles akin to the woodchips used in the demo for the class.
+However, after doing some googling it seems like the model is included. I opened the 'models library' and found an impressive roster of things programmed
+in NetLogo! Trying a few, I think 'rumor mill' is the closest to what I currently employ, which can be seen in Ephemera.
+Integrating some of the code from Rumor Mill into my own, I now have patches of land that change color based on the character that walks their and their color.
+Unfortunately, I'm very sick today, which has made progress slower than it would normally be.
+Trying out a few more models contained within NetLogo innately, I find that some very impressive things are possible. Clearly much more than I anticipated.
+
+
+Imperative coding languages like netlogo are the opposite of what I usually work with, making this a unique kind of puzzle. In the past, the only language
+of the sort I've used is R5RS, which was mainly to solve logic puzzles and sort databases. 
+Trying to integrate termites with the rumor-mill style simulation, I've certainly broken everything. The turtles no longer move, and random squares turn slowly
+from black to green... I cannot stop the simulation or redo the setup. Oh dear. (See Screenshot_1)
+I managed to roll back to an earlier version, but lost the progress in which the turtles made paths that matched their colors. That's a shame!
+
+...And the error comes back again just from trying to set the pcolor of the local tile to red or blue. Something is wrong! (See Broken Code image)
+After some time, I've fixed it again. See the video 'Working streaks' to view the results.
+
+That's a few hours into things, but not much has changed. Because I'm beginning to flounder I'll call the project here and begin to focus on my unessay!
