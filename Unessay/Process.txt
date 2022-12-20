@@ -1,0 +1,75 @@
+Initial Consideration:
+A focus on attempting my own contributions to the discussion of playing with the past, as opposed to attempting to prove something. (As per feedback)
+Main topics in the course to consider: Storytelling, Playfulness, Computation
+Immersive Experience!!!
+
+Storytelling, computation, and playfulness with the past are best exemplefied not through the raw technology, but through how it is used. As per the Unessay Paradata, this would
+be most effective in the game that recounts a mundane historical event using stylized portraits and characters based on those the player knows in real life.
+Thus, when a 'childhood friend' runs up to the player and asks them for help, they feel more relation to them.
+How immersive this is is based on the accuracy of the images, so lets try to create accurate face-generation in Stable Diffusion.
+
+First Goal: Get Stable Diffusion Working
+...After a few hours, this is working. This did not involve anything incredibly complex, but I did download the github repository for automatic 1111
+(AKA stable diffusion) and played with many of the features that can be attempted after running the webui.Bat to familiarize myself with the technology.
+I used a website (https://lexica.art/) to  find good-looking prompts to edit and use, mostly just trying to make things that looked nice over specifics.
+
+I take a few days break between the first goal and the second to consider how to gameify this technology, and come up with what I discuss above.
+
+Second Goal: Get face training working
+(https://www.youtube.com/watch?v=TwhqmkzdH3s)
+My friend Calvin has generously allowed me to use some images of him to train a model, where I specified the following: 
+"3 full body images
+5 stomach to the top of the head
+12 face pics
+(All of these need to have some variety to them so try different angles and poses)"
+Following this half hour guide linked above was more of a five hour process. Even at the end when I had done everything 'right,' the code still crashed upon saving
+a checkpoint (these massive files trained to use AI images). There are several components to this. The computer takes the images of the training model, Calvin,
+and then you give it a huge register of files to compare against him to define what makes Calvin unique. I used generic face images generated using the same model.
+
+In one single instance, the checkpoint saved before crashing, and I was given something to use for the project. The next day I try some prompts, and things
+go quite well! I am surprised, considering the model is only 1/2 trained and the photos given to do training were merely webcam photos taken on a whim.
+
+I take another week's break here to complete my honours project, and write up the unessay paradata. If I were part of a group, I might demonstrate using some members
+of the class to use as portraits for an RPG Maker game, but this idea comes too late to be possible. Having used the technology before, I know for certain that
+they are compatible. 
+
+Third Goal: Enhance the Quality
+AKA Refine Face Training with Justin Zhang's Help, and discover why the system crashes.
+Justin, a friend who has worked with this technology for a few months, has seen my progress and given me some advice.
+He recommends using a different model altogether (Hugging Face 1.5 instead of 1.4), some prompt tips, and other minor details that should make training more effective.
+Starting with prompts (https://docs.google.com/document/d/1quuHH5AfQmPpBUoGH6CAQehox1T0uPNFQEvFTxwqnOY/edit?usp=sharing) and alternate training methods,
+my training parameters go from 
+python main.py --base configs/stable-diffusion/v1-finetune_unfrozen.yaml -t --actual_resume sd-v1-4-full-ema.ckpt --reg_data_root classes/class-face-samples -n rexleox --gpus 0, --data_root training_images\rexleox --batch_size 32 --class_word face
+to
+python main.py --base configs/stable-diffusion/v1-finetune_unfrozen.yaml -t --actual_resume v1-5-pruned.ckpt --reg_data_root classes/class-person-samples -n rexleox2 --gpus 0, --data_root training_images\rexleox --batch_size 32 --class_word person
+
+Of course, this was not the first thing I tried as far as training parameters. I thought that I could solve my crash by playing with the params for a while,
+so I tried alll sorts of options that limited VRAM on the computer to no avail.
+Results will not be perfectly optimal as the training images feature a person with the same clothes and similar backgrounds
+Changing the prompt required about an hour of generating sample 'person' images akin to the 'face' image generation in step one as regularization.
+Acquired a new base checkpoint to work against, Hugging-Face v1.5... It also came with a trojan virus, which my computer caught. Not happy about that, but it could be worse.
+I trust the hugging face site, and assume it must have gotten in due to the download mirror they selected for their technology. Feeling cautious, I run a full system
+scan that ends up taking a lot of time.
+Attempting to use a regularization image from the internet instead of my own, and changed tag from 'face' to 'person.'
+
+It still crashes, and I can't even get a half-baked checkpoint like I did before. Uh oh.
+
+Five hours pass. I have scoured the internet for every possible solution to the crash related to lack of memory, and nothing works. 
+I read the error messages closely, and find that this error is diferent than the ones I've been seeing online, though only barely.
+It does not reference GeForce/NIVIDA when it mentions it is out of memory, and this confuses me, because I have 16GB of ram and a top of the 
+line graphics card that was released in the last 4 months (purely by chance, I upgrade every 8ish years). 
+Something on my system is afoot, and finally after manually shifting my windows system settings to use more VRAM than the system allows by default,
+it finally works. I can train the model fully, and use all of Justin's recommendations. Before today I did not even know what VRAM was.
+
+
+It does look very nice, and mostly accurate. I am pleased with the results. The system seems good for still portraits, but fails to generate anything suitably
+complex. I attempted to include Calvin doing some historical things like fighting hitler in various ways, but none of them worked. They may or may not even include
+either Calvin or Hitler, and the only one that looks somewhat workable after around 30 attempts is the one using lightsabers. It seems the system is not quite
+ready to recreate battle scenes, assassinations, or elements of warfare.
+
+Because the system works, remains consistent, and is based entirely locally on my computer, I know that I can make this work for other people now too.
+Justin's managed to get multiple people into the same image, but I am not quite so advanced. Further, that remains out of the scope of the project.
+Theoretically, if that were implemented a whole visual novel could be trained using AI images. It might not be perfectly consistent, but it is possible!
+
+If it were possible, I would include checkpoint trained with Calvin's likeness, or the setup I used to generate everything, but these files take up easily 40GB of data.
+I can't get them onto Github!
